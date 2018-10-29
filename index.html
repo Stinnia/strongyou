@@ -1,11 +1,27 @@
 <!doctype html>
 <html>
+
 <head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
-<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
-<script>
-  // Initialize Firebase
+    <meta charset="utf-8">
+    <title>STrong you</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.5/firebase.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+    <script>
+        // Initialize Firebase
   var config = {
     apiKey: "AIzaSyBXbrqGD01x4wou1JjgBS7nKDHVIbt6ihY",
     authDomain: "workout-4d072.firebaseapp.com",
@@ -19,6 +35,56 @@
 </head>
 
 <body>
+<<<<<<< HEAD
+    <h2>All players and scores</h2>
+    <pre id="output"></pre>
+    <hr>
+    <h2>Create new player</h2>
+    <form>
+        <p>
+            <input type="text" name="name" id="name" placeholder="Playername" required>
+        </p>
+        <p>
+            <input type="number" name="score" id="score" placeholder="Score" required>
+        </p>
+        <button type="submit" id="submit">Create new player</button>
+    </form>
+    <script>
+        var database = firebase.database();
+        var submitButton = document.getElementById('submit');
+        submitButton.addEventListener('click', createPlayer);
+
+        // read from database
+        database.ref('scores/').once('value', function(snapshot) {
+            snapshot.forEach(function(childSnap) {
+                // storing all keys (i.e. "player1", "player2", ... )
+                let allPlayers = childSnap.child('name').val();
+                // storing all values of the child node "score"
+                let allScores = childSnap.child('score').val();
+                console.log(allScores);
+                // rendering the keys and values
+                document.getElementById('output').innerHTML += allPlayers + ': ' + allScores + '<br>';
+            });
+        });
+
+        // write to database
+        function createPlayer() {
+            var name = document.getElementById('name').value;
+            var score = document.getElementById('score').value;
+            // console.log(name + ', ' + score)
+            // storing user input in an object
+            var playerData = {
+                "name": name,
+                "score": score
+            }
+            // generate a firebase key for the object
+            var newPlayer = database.ref('scores/').push().key;
+            // update database with the player object
+            database.ref('scores/' + newPlayer).update(playerData);
+        }
+
+    </script>
+=======
 <h2>All players and scores</h2>
 <pre id="output"></pre>
 <hr>
@@ -67,5 +133,7 @@
 		database.ref('workout/' + newPlayer).update(playerData);
 	}
 </script>
+>>>>>>> 226be333c80d45dbeab31769776d5b4bc922cf84
 </body>
+
 </html>
