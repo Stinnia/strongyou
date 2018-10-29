@@ -1,0 +1,24 @@
+{
+	"workout-log": {
+		"sessions-01": {
+			"pull-ups": {
+				"1": {
+					"kg": "14",
+					"rep": "10",
+					"done": "true"
+				},
+				"2": {
+					"kg": "15",
+					"rep": "10",
+					"done": "true"
+				},
+				"3": {
+					"kg": "16",
+					"rep": "10",
+					"done": "false"
+				}
+			}
+		}
+	}
+
+}
