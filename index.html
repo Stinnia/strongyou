@@ -39,32 +39,32 @@
 	submitButton.addEventListener('click', createPlayer);
 											   
 	// read from database
-	database.ref('scores/').once('value', function(snapshot) {
+	database.ref('workout/').once('value', function(snapshot) {
    		snapshot.forEach(function (childSnap) {
 			// storing all keys (i.e. "player1", "player2", ... )
-			let allPlayers = childSnap.child('name').val();
+			let kiloGrams = childSnap.child('kg').val();
 			// storing all values of the child node "score"
-			let allScores = childSnap.child('score').val();
-  			console.log(allScores);
+			let repetition = childSnap.child('rep').val();
+  			console.log(kiloGrams);
 			// rendering the keys and values
-			document.getElementById('output').innerHTML += allPlayers + ': ' + allScores + '<br>';
+			document.getElementById('output').innerHTML += kiloGrams + ' kg' + ': ' + repetition + ' reps' + '<br>';
  		});
   });
 	
 // write to database
 	function createPlayer () {
-		var name = document.getElementById('name').value;
-		var score = document.getElementById('score').value;
+		var kg = document.getElementById('kg').value;
+		var rep = document.getElementById('rep').value;
 		// console.log(name + ', ' + score)
 		// storing user input in an object
 		var playerData = {
-			"name" : name,
-			"score" : score
+			"kg" : kg,
+			"rep" : rep
 		}
 		// generate a firebase key for the object
-		var newPlayer = database.ref('scores/').push().key;
+		var newPlayer = database.ref('workout/').push().key;
 		// update database with the player object
-		database.ref('scores/' + newPlayer).update(playerData);
+		database.ref('workout/' + newPlayer).update(playerData);
 	}
 </script>
 </body>
