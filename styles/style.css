@@ -1,0 +1,33 @@
+@charset "utf-8";
+/* CSS Document */
+
+th {
+    border: 1px black solid;
+    padding: 5px 10px;
+}
+
+/*
+.griddy {
+    width: 100%;
+    max-width: 600px;
+    margin: 20 100;
+    overflow: hidden;
+}
+
+.box {
+    background: aqua;
+    max-width: 600px;
+    height: 200px;
+    border-radius: 10px;
+}
+*/
+
+.screen {
+    padding: 15px;
+}
+
+.marvel-device {
+    display: inline-block;
+    float: left;
+    margin: 20px;
+}
