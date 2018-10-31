@@ -22,62 +22,35 @@
 
 <body>
 <h2>All players and scores</h2>
-	
-	
-	<table class="table" id="output" >
-		<thead>
-			<tr>
-				<th>Sets</th>
-				<th>Previous</th>
-				<th>Kg</th>
-				<th>Reps</th>
-				<th>Done</th>
-			</tr>
-			<tr>
-			<th id="output_set"></th>
-			<th id="output_previous"></th>
-			<th id="output_kg"></th>
-			<th id="output_reps"></th>
-			<th id="output_done"></th>
-			</tr>
-			
-
-				
-		</thead>
-		
-	</table>
-	
-	
+<pre id="output"></pre>
+<table>
+  <tr class="border">
+    <th>Set</th>
+    <th>Previous</th>
+    <th>Kg</th>
+    <th>Reps</th>
+    <th>Done</th>
+  </tr>
+  <tr>
+    <th>1</th>
+    <th>12kgx10</th>
+    <th>14</th>
+    <th>10</th>
+    <th><button type="checkbox"></button></th>
+  </tr>
+</table>
 <hr>
 <h2>Create new player</h2>
-
- 				 <p>
-    <input type="number" name="set" id="set" placeholder="Set" required>
+<form>
+  <p>
+    <input type="text" name="kg" id="kg" placeholder="Kg" required>
   </p>
-				
-				<p>
-    <input type="text" name="previous" id="previous" placeholder="12kgx10" required>
+  <p>
+    <input type="number" name="rep" id="rep" placeholder="Rep" required>
   </p>
-				
-				<p>
-    <input type="number" name="kg" id="kg" placeholder="14 kg" required>
-  </p>
-				
-				<p>
-    <input type="number" name="reps" id="reps" placeholder="10 reps" required>
-  </p>
-				
-				<p>
-   <button type="submit" id="submit">Done</button>
-  </p>
-	
-	
-	
-	
-  
-
+  <button type="submit" id="submit">Create new player</button>
+</form>
 <script>
-	
 	
 	  var database = firebase.database();
 	var submitButton = document.getElementById('submit');
@@ -96,11 +69,11 @@
 			
   			console.log(kg);
 			// rendering the keys and values
-			document.getElementById('output_set').innerHTML += '<td>' + set + '</td>' + '<br>';
+			document.getElementById('output_set').innerHTML +=  set + '<br>';
 			document.getElementById('output_previous').innerHTML += previous + '<br>';
 			document.getElementById('output_kg').innerHTML += kg + '<br>';
 			document.getElementById('output_reps').innerHTML += reps + '<br>';
-			document.getElementById('output_done').innerHTML += '<input type="checkbox" checked>' + '<br>';
+			document.getElementById('output_done').innerHTML += '<input type="checkbox" checked disabled>' + '<br>';
  		});
   });
 	// kg + ' kg' + ': ' + rep + ' reps' + 
@@ -124,32 +97,6 @@
 		// update database with the player object
 		database.ref('workout-log/sessions-01/pull-ups/' + newData).update(playerData);
 	}
-
-	
-	
 </script>
-	<!-- <script>
-	//reference table and div
-const firedata = document.getElementById('displayData');
-const display = document.getElementById('display');
-
-//create reference
-const dbRefObject = firebase.database().ref().child('workout-log/sessions-01/pull-ups/' );
-
-//sync changes
-dbRefObject.on('value', snap => {
-  
-//Display data in an HTML Table
-//????????????
-
-//display JSON in a div - works ok, returns the JSON above
-  display.innerText = JSON.stringify(snap.val(), null, 3);
-
-//display in console - works ok
-  console.log(snap.val()); 
-});
-	</script> -->
-
-
 </body>
 </html>
