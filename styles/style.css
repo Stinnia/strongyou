@@ -6,73 +6,60 @@
 
 
 .griddy {
-    padding: 10px;
-    height: 100vh !important;
+	padding: 10px;
+	height: 100vh !important;
 	border: thin solid #D9D9D9;
 	overflow: hidden;
 }
 .row {
 	padding: 10px;
 }
-
 .row1 {
 	height: 15%;
 	overflow: hidden;
-	padding-top: 20px;		
+	padding-top: 20px;
 }
-
 .row2 {
 	height: 10%;
-		overflow: hidden;
-
+	overflow: hidden;
 }
 .row3 {
 	height: 20%;
-		overflow: hidden;
+	overflow: hidden;
 }
 .row4 {
 	height: 5%;
-		overflow: hidden;
-
+	overflow: hidden;
 }
 .row5 {
 	height: 50%;
 	overflow: hidden;
-
 }
-
 /*navigation*/
 .active-nav {
 	background-color: #3BA6F7;
 	height: 80%;
-		vertical-align: middle;
-
+	vertical-align: middle;
 }
-
 .inactive-nav {
 	background-color: white;
 	border-bottom: 1px solid #3BA6F7;
-		border-right: 1px solid #3BA6F7;
-			border-top: 1px solid #3BA6F7;
+	border-right: 1px solid #3BA6F7;
+	border-top: 1px solid #3BA6F7;
 	height: 80%;
 }
-
-
 .active-nav h3 {
-/*	margin-top: 20%;*/
+	/*	margin-top: 20%;*/
 	font-size: 2em;
 	color: white;
 	text-align: center;
-	
 }
-
-
 th {
-    border: 1px black solid;
-    padding: 5px 10px;
+	border: none;
 }
-
-
-
-
-
+input {
+	width: 55px;
+}
+table {
+	margin: 10px;
+}
