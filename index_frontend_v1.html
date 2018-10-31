@@ -1,0 +1,347 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Strong you</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/devices.min.css" type="text/css">
+
+    <link rel="stylesheet" href="styles/style.css">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+
+    <script>
+        // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBXbrqGD01x4wou1JjgBS7nKDHVIbt6ihY",
+    authDomain: "workout-4d072.firebaseapp.com",
+    databaseURL: "https://workout-4d072.firebaseio.com",
+    projectId: "workout-4d072",
+    storageBucket: "workout-4d072.appspot.com",
+    messagingSenderId: "431224881060"
+  };
+  firebase.initializeApp(config);
+</script>
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="trin1" class="marvel-device iphone8 silver">
+            <div class="top-bar"></div>
+            <div class="sleep"></div>
+            <div class="volume"></div>
+            <div class="camera"></div>
+            <div class="sensor"></div>
+            <div class="speaker"></div>
+            <div class="screen">
+
+                <div class="container">
+
+                    <div id="profile" class="row align-items-top">
+                        <div id="menu" class="col-2">
+                            <i class="fas fa-bars"></i>
+
+                        </div>
+                        <div id="foto" class="col-4">
+                            <img class="img-fluid" src="assets/olga%20komarova-500x500.jpg" alt="">
+
+                        </div>
+                        <div id="profile-info" class="col-6">
+                            <h5>Olga Komarova</h5>
+                            <p>Profile information<i class="far fa-edit"></i></p>
+                            <h5>ACL TEAM</h5>
+
+                        </div>
+
+                    </div>
+
+                    <div id="navigation" class="row align-items-center ">
+                        <div class="col-sm">Workouts</div>
+                        <div class="col-sm">Analyitcs</div>
+                        <div class="col-sm">Injury info</div>
+
+                    </div>
+
+                    <div id="overview" class="row align-items-center">
+                        <div class="col-4">
+                            <img src="assets/dumbbells-exercise.svg" alt="bells">
+                        </div>
+
+                    </div>
+
+                    <div id="buttons" class="row align-items-center">
+
+                        <div class="col-md align-self-center">
+                            <button type="button" class=" btn btn-outline-primary">Introduction class</button>
+                        </div>
+                    </div>
+
+
+                    <div id="result-table" class="row no-gutter align-items-center ">
+                        <div class="row ">
+                            <div class="col-md-2">1</div>
+                            <div class="col-md-4">
+                                <div class="row">Session 1</div>
+                                <div class="row">45 min workout</div>
+                            </div>
+                            <div class="col-md-2">2</div>
+                            <div class="col-md-4">
+                                <div class="row">Session 1</div>
+                                <div class="row">45 min workout</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-2">3</div>
+                            <div class="col-md-4">
+                                <div class="row">Session 1</div>
+                                <div class="row">45 min workout</div>
+                            </div>
+                            <div class="col-md-2">4</div>
+                            <div class="col-md-4">
+                                <div class="row">Session 1</div>
+                                <div class="row">45 min workout</div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-2">5</div>
+                            <div class="col-md-4">
+                                <div class="row">Session 1</div>
+                                <div class="row">45 min workout</div>
+                            </div>
+                            <div class="col-md-2">6</div>
+                            <div class="col-md-4">
+                                <div class="row">Session 1</div>
+                                <div class="row">45 min workout</div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+            </div>
+            <div class="home"></div>
+            <div class="bottom-bar"></div>
+        </div>
+
+
+        <div id="trin2" class="marvel-device iphone8 silver">
+            <div class="top-bar"></div>
+            <div class="sleep"></div>
+            <div class="volume"></div>
+            <div class="camera"></div>
+            <div class="sensor"></div>
+            <div class="speaker"></div>
+            <div class="screen">
+
+
+                <h2>All players and scores</h2>
+                <pre id="output"></pre>
+                <table>
+                    <tr class="border">
+                        <th>Set</th>
+                        <th>Previous</th>
+                        <th>Kg</th>
+                        <th>Reps</th>
+                        <th>Done</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>12kgx10</th>
+                        <th>14</th>
+                        <th>10</th>
+                        <th><button type="checkbox"></button></th>
+                    </tr>
+                </table>
+                <hr>
+                <h2>Create new player</h2>
+                <form>
+                    <p>
+                        <input type="text" name="kg" id="kg" placeholder="Kg" required>
+                    </p>
+                    <p>
+                        <input type="number" name="rep" id="rep" placeholder="Rep" required>
+                    </p>
+                    <button type="submit" id="submit">Create new player</button>
+                </form>
+
+
+            </div>
+            <div class="home"></div>
+            <div class="bottom-bar"></div>
+        </div>
+
+        <div id="trin3" class="marvel-device iphone8 silver">
+            <div class="top-bar"></div>
+            <div class="sleep"></div>
+            <div class="volume"></div>
+            <div class="camera"></div>
+            <div class="sensor"></div>
+            <div class="speaker"></div>
+            <div class="screen">
+                <div class="grid grid-pad">
+                    <div class="col-2-12">
+                        <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. !</h3>
+                    </div>
+                    <div class="col-10-12">
+                        <div class="logo">
+                            <p>Logo</p>
+                        </div>
+                        <div class="nav">
+                            <button class="">One</button>
+                            <button>two</button>
+                            <button>three</button>
+                        </div>
+                    </div>
+                    <div class="col-4-12">
+                        <div class="box">
+                            <p>Boks 1</p>
+                        </div>
+                    </div>
+                    <div class=".bg-light col-3-12 push-1-12">
+                        <div class="box">
+                            <p>Boks 2</p>
+                        </div>
+                    </div>
+                    <div class="col-4-12">
+                        <div class="box">
+                            <p>Boks 3</p>
+                        </div>
+                    </div>
+                    <div class="col-4-12">
+                        <div class="box">
+                            <p>Boks 4</p>
+                        </div>
+                    </div>
+                    <div class="col-4-12">
+                        <div class="box">
+                            <p>Boks 5</p>
+                        </div>
+                    </div>
+                    <div class="col-4-12">
+                        <div class="box">
+                            <p>Boks 6</p>
+                        </div>
+                    </div>
+                    <div class="col-1-1">
+                        <footer>
+                            <p>Footer</p>
+                        </footer>
+                    </div>
+
+
+
+                </div>
+                <div class="home"></div>
+                <div class="bottom-bar"></div>
+            </div>
+        </div>
+
+        <div id="trin4" class="marvel-device iphone8 silver">
+            <div class="top-bar"></div>
+            <div class="sleep"></div>
+            <div class="volume"></div>
+            <div class="camera"></div>
+            <div class="sensor"></div>
+            <div class="speaker"></div>
+            <div class="screen">
+
+
+                <h2>All players and scores</h2>
+                <pre id="output"></pre>
+                <table>
+                    <tr class="border">
+                        <th>Set</th>
+                        <th>Previous</th>
+                        <th>Kg</th>
+                        <th>Reps</th>
+                        <th>Done</th>
+                    </tr>
+                    <tr>
+                        <th>1</th>
+                        <th>12kgx10</th>
+                        <th>14</th>
+                        <th>10</th>
+                        <th><button type="checkbox"></button></th>
+                    </tr>
+                </table>
+                <hr>
+                <h2>Create new player</h2>
+                <form>
+                    <p>
+                        <input type="text" name="kg" id="kg" placeholder="Kg" required>
+                    </p>
+                    <p>
+                        <input type="number" name="rep" id="rep" placeholder="Rep" required>
+                    </p>
+                    <button type="submit" id="submit">Create new player</button>
+                </form>
+
+
+            </div>
+            <div class="home"></div>
+            <div class="bottom-bar"></div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <!--scripts start here-->
+
+    <script>
+        var database = firebase.database();
+        var submitButton = document.getElementById('submit');
+        submitButton.addEventListener('click', createData);
+
+        // read from database
+        database.ref('workout/').once('value', function(snapshot) {
+            snapshot.forEach(function(childSnap) {
+                // storing all keys (i.e. "player1", "player2", ... )
+                let kg = childSnap.child('kg').val();
+                // storing all values of the child node "score"
+                let rep = childSnap.child('rep').val();
+                console.log(kg);
+                // rendering the keys and values
+                document.getElementById('output').innerHTML += kg + ' kg' + ' ' + rep + ' reps' + '<br>';
+            });
+        });
+        // kg + ' kg' + ': ' + rep + ' reps' + 
+
+        // write to database
+        function createData() {
+            var kg = document.getElementById('kg').value;
+            var rep = document.getElementById('rep').value;
+            // console.log(name + ', ' + score)
+            // storing user input in an object
+            var playerData = {
+                "kg": kg,
+                "rep": rep
+            }
+            // generate a firebase key for the object
+            var newData = database.ref('workout/').push().key;
+            // update database with the player object
+            database.ref('workout/' + newData).update(playerData);
+        }
+
+    </script>
+</body>
+
+</html>
