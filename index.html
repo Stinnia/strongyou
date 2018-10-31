@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <title>Untitled Document</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="styles.css">
 <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
 <script>
   // Initialize Firebase
@@ -22,43 +22,50 @@
 
 <body>
 <h2>All players and scores</h2>
-<pre id="output"></pre>
-<table>
-  <tr class="border">
-    <th>Set</th>
-    <th>Previous</th>
-    <th>Kg</th>
-    <th>Reps</th>
-    <th>Done</th>
-  </tr>
-  <tr>
-    <th>1</th>
-    <th>12kgx10</th>
-    <th>14</th>
-    <th>10</th>
-    <th><button type="checkbox"></button></th>
-  </tr>
+<table id="output" >
+  <thead>
+    <tr>
+      <th>Set</th>
+      <th>Previous</th>
+      <th>Kg</th>
+      <th>Reps</th>
+      <th>Done</th>
+    </tr>
+    
+  </thead>
+  <tbody>
+	  
+	  <tr><form>
+	  <td><input type="number" id="set" placeholder="Set" required></td>
+	  <td><input type="text" id="previous" value="14kgx10"></td>
+	  <td><input type="number" id="kg" placeholder="14" required></td>
+	  <td><input type="number" id="reps" placeholder="10" required></td>
+	  <td><input type="checkbox" id="submit" onclick="form.submit();"></td>
+	  </form></tr>
+	  <tr>
+      <td id="output_set"></td>
+      <td id="output_previous"></td>
+      <td id="output_kg"></td>
+      <td id="output_reps"></td>
+      <td id="output_done"></td>
+    </tr>
+  </tbody>
 </table>
-<hr>
-<h2>Create new player</h2>
-<form>
-  <p>
-    <input type="text" name="kg" id="kg" placeholder="Kg" required>
-  </p>
-  <p>
-    <input type="number" name="rep" id="rep" placeholder="Rep" required>
-  </p>
-  <button type="submit" id="submit">Create new player</button>
-</form>
+
 <script>
+	
 	
 	  var database = firebase.database();
 	var submitButton = document.getElementById('submit');
 	var tableData = [];
 	submitButton.addEventListener('click', createData);
-											   
+	
+
+	
+	
 	// read from database
 	database.ref('workout-log/sessions-01/pull-ups/').once('value', function(snapshot) {
+		
    		snapshot.forEach(function (childSnap) {
 			
 			let set = childSnap.child('set').val();
@@ -70,12 +77,13 @@
   			console.log(kg);
 			// rendering the keys and values
 			document.getElementById('output_set').innerHTML +=  set + '<br>';
-			document.getElementById('output_previous').innerHTML += previous + '<br>';
+			document.getElementById('output_previous').innerHTML += kg + ' kg x' + reps + '<br>';
 			document.getElementById('output_kg').innerHTML += kg + '<br>';
 			document.getElementById('output_reps').innerHTML += reps + '<br>';
 			document.getElementById('output_done').innerHTML += '<input type="checkbox" checked disabled>' + '<br>';
  		});
   });
+	
 	// kg + ' kg' + ': ' + rep + ' reps' + 
 	
 // write to database
@@ -97,6 +105,7 @@
 		// update database with the player object
 		database.ref('workout-log/sessions-01/pull-ups/' + newData).update(playerData);
 	}
+
 </script>
 </body>
 </html>
