@@ -16,11 +16,10 @@ body {
 	overflow: hidden;
 }
 
-.row {
-	padding: 10px;
-}
+
+
 .row1 {
-	height: 16%;
+	height: 20%;
 	overflow: hidden;
 
 }
@@ -68,17 +67,18 @@ body {
 /*buttons*/
 
 .btn {
-    padding: 14px 30px;
+/*    padding: 14px 30px;*/
     border: 1px solid #3BA6F7;
     font-weight: 700;
     letter-spacing: 1px;
     text-transform: uppercase;
 	border-radius: 0;
+	margin: 0;
+	font-size: 12px;
 }
 .btn:focus, .btn:active:focus, .btn.active:focus {
     outline: 0 none;
 }
-
 
 
 
@@ -93,6 +93,7 @@ td {
 }
 
 #profile-info i{
+	margin: 5px;
 	font-size: 30px; 
 	color: #3BA6F7;
 }
