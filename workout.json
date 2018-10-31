@@ -3,18 +3,24 @@
 		"sessions-01": {
 			"pull-ups": {
 				"1": {
+					"set": "1",
+					"previous": "12kgx10",
 					"kg": "14",
-					"rep": "10",
+					"reps": "10",
 					"done": "true"
 				},
 				"2": {
+					"set": "2",
+					"previous": "14kgx10",
 					"kg": "15",
-					"rep": "10",
+					"reps": "10",
 					"done": "true"
 				},
 				"3": {
+					"set": "3",
+					"previous": "16kgx10",
 					"kg": "16",
-					"rep": "10",
+					"reps": "10",
 					"done": "false"
 				}
 			}
