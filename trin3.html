@@ -59,66 +59,96 @@
         </div>
 
         <div id="result-table" class="row row5 align-items-top">
+			<h3 class="text-center">Workout-log</h3>
             <div class="row">
-                <div class="col-md-2"><h3>Set</h3></div>
-                <div class="col-md-4"><h3>Previous</h3>
-        
-                </div>
-                <div class="col-md-2"><h3>kg</h3></div>
-                <div class="col-md-2"><h3>Reps</h3>
-                </div>
-				 <div class="col-md-2"><h3>Done</h3>
-                </div>
-            </div>
-                 
-            </div>
+                
+<table>
+  <thead>
+    <tr>
+      <th>Set</th>
+      <th>Previous</th>
+      <th>Kg</th>
+      <th>Reps</th>
+      <th>Done</th>
+    </tr>
+    
+  </thead>
+  <tbody>
+	  
+	  <tr><form>
+	  <td><input type="number" id="set" placeholder="Set" required></td>
+	  <td><input type="text" id="previous" value="14kgx10"></td>
+	  <td><input type="number" id="kg" placeholder="14" required></td>
+	  <td><input type="number" id="reps" placeholder="10" required></td>
+	  <td><button type="submit" id="submit">Done</button></td>
+	  </form></tr>
+	  <tr>
+      <td id="output_set"></td>
+      <td id="output_previous"></td>
+      <td id="output_kg"></td>
+      <td id="output_reps"></td>
+      <td id="output_done"></td>
+    </tr>
+  </tbody>
+</table>
+			</div>
+		</div>
+	</div>
+<script>
+	
+	
+	  var database = firebase.database();
+	var submitButton = document.getElementById('submit');
+	var tableData = [];
+	submitButton.addEventListener('click', createData);
+	
 
- </div>
+	
+	
+	// read from database
+	database.ref('workout-log/sessions-01/pull-ups/').once('value', function(snapshot) {
+		
+   		snapshot.forEach(function (childSnap) {
+			
+			let set = childSnap.child('set').val();
+			let previous = childSnap.child('previous').val();
+			let kg = childSnap.child('kg').val();
+			let reps = childSnap.child('reps').val();
+			let done = childSnap.child('done').val();
+			
+  			console.log(kg);
+			// rendering the keys and values
+			document.getElementById('output_set').innerHTML +=  set + '<br>';
+			document.getElementById('output_previous').innerHTML += kg + ' kg x' + reps + '<br>';
+			document.getElementById('output_kg').innerHTML += kg + '<br>';
+			document.getElementById('output_reps').innerHTML += reps + '<br>';
+			document.getElementById('output_done').innerHTML += '<input type="checkbox" checked disabled>' + '<br>';
+ 		});
+  });
+	
+	// kg + ' kg' + ': ' + rep + ' reps' + 
+	
+// write to database
+	function createData () {
+		var set = document.getElementById('set').value;
+		var previous = document.getElementById('previous').value;
+		var kg = document.getElementById('kg').value;
+		var reps = document.getElementById('reps').value;
+		// console.log(name + ', ' + score)
+		// storing user input in an object
+		var playerData = {
+			"set" : set,
+			"previous" : previous,
+			"kg" : kg,
+			"reps" : reps
+		}
+		// generate a firebase key for the object
+		var newData = database.ref('workout-log/sessions-01/pull-ups/').push().key;
+		// update database with the player object
+		database.ref('workout-log/sessions-01/pull-ups/' + newData).update(playerData);
+	}
 
-
-
-
-
-
-
-    <!--scripts start here-->
-
-    <script>
-        var database = firebase.database();
-        var submitButton = document.getElementById('submit');
-        submitButton.addEventListener('click', createData);
-
-        // read from database
-        database.ref('workout/').once('value', function(snapshot) {
-            snapshot.forEach(function(childSnap) {
-                // storing all keys (i.e. "player1", "player2", ... )
-                let kg = childSnap.child('kg').val();
-                // storing all values of the child node "score"
-                let rep = childSnap.child('rep').val();
-                console.log(kg);
-                // rendering the keys and values
-                document.getElementById('output').innerHTML += kg + ' kg' + ' ' + rep + ' reps' + '<br>';
-            });
-        });
-        // kg + ' kg' + ': ' + rep + ' reps' + 
-
-        // write to database
-        function createData() {
-            var kg = document.getElementById('kg').value;
-            var rep = document.getElementById('rep').value;
-            // console.log(name + ', ' + score)
-            // storing user input in an object
-            var playerData = {
-                "kg": kg,
-                "rep": rep
-            }
-            // generate a firebase key for the object
-            var newData = database.ref('workout/').push().key;
-            // update database with the player object
-            database.ref('workout/' + newData).update(playerData);
-        }
-
-    </script>
+</script>
 </body>
 
 </html>
