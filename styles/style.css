@@ -62,10 +62,21 @@
 /*	margin-top: 20%;*/
 	font-size: 2em;
 	color: white;
-	text-align: center;
+
 	
 }
 
+.row2 .col-sm {
+	display: inline-block;
+}
+
+/*buttons*/
+
+.btn-lg {
+	height: 100px;
+	
+	
+}
 
 th {
     border: 1px black solid;
