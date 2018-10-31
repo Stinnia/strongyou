@@ -4,38 +4,54 @@
 /*color #3BA6F7 or RGB rgb 59, 166, 247*/
 
 
+body {
+	
+}
+
 
 .griddy {
-	padding: 10px;
+	padding: 40px 10px;
 	height: 100vh !important;
 	border: thin solid #D9D9D9;
 	overflow: hidden;
 }
+
 .row {
 	padding: 10px;
 }
 .row1 {
-	height: 15%;
+	height: 16%;
 	overflow: hidden;
-	padding-top: 20px;
+
 }
 .row2 {
 	height: 10%;
 	overflow: hidden;
 }
 .row3 {
-	height: 10%;
+	height: 4%;
 	overflow: hidden;
 }
 .row4 {
 	height: 10%;
 	overflow: hidden;
-	align-content: center;
 }
 .row5 {
 	height: 45%;
 	overflow: hidden;
 }
+
+.row5 .row p {
+	font-size:0.9em;
+}
+
+/*
+.row5 .row div {
+	font-size:1.5em;
+}
+*/
+
+
 /*navigation*/
 .active-nav {
 	background-color: #3BA6F7;
@@ -49,12 +65,10 @@
 	height: 60%;
 }
 
-
-
 /*buttons*/
 
 .btn {
-    padding: 14px 20px;
+    padding: 14px 30px;
     border: 1px solid #3BA6F7;
     font-weight: 700;
     letter-spacing: 1px;
@@ -65,15 +79,23 @@
     outline: 0 none;
 }
 
-.btn-lg {
-	height: 100px;
-	padding: 0 80px;	
+
+
+
+
+td {
+	font-size: 2em;
 }
 
-p {
-	font-size: 1em;
+#menu i{
+	font-size: 55px; 
+	color: #3BA6F7;
 }
 
+#profile-info i{
+	font-size: 30px; 
+	color: #3BA6F7;
+}
 
 th {
 	border: none;
