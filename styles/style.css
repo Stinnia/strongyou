@@ -24,45 +24,54 @@
 	overflow: hidden;
 }
 .row3 {
-	height: 20%;
+	height: 10%;
 	overflow: hidden;
 }
 .row4 {
-	height: 5%;
+	height: 10%;
 	overflow: hidden;
+	align-content: center;
 }
 .row5 {
-	height: 50%;
+	height: 45%;
 	overflow: hidden;
 }
 /*navigation*/
 .active-nav {
 	background-color: #3BA6F7;
-	height: 80%;
-	vertical-align: middle;
+
 }
 .inactive-nav {
 	background-color: white;
 	border-bottom: 1px solid #3BA6F7;
 	border-right: 1px solid #3BA6F7;
 	border-top: 1px solid #3BA6F7;
-	height: 80%;
-}
-.active-nav h3 {
-	/*	margin-top: 20%;*/
-	font-size: 2em;
-	color: white;
+	height: 60%;
 }
 
-.row2 .col-sm {
-	display: inline-block;
-}
+
 
 /*buttons*/
 
+.btn {
+    padding: 14px 20px;
+    border: 1px solid #3BA6F7;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+	border-radius: 0;
+}
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+
 .btn-lg {
 	height: 100px;
-	
+	padding: 0 80px;	
+}
+
+p {
+	font-size: 1em;
 }
 
 

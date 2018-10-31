@@ -1,25 +1,16 @@
 <!doctype html>
 <html>
-
 <head>
-    <meta charset="utf-8">
-    <title>Strong you</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="styles/style.css">
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
-
-    <script>
+<meta charset="utf-8">
+<title>Strong you</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+<link rel="stylesheet" href="styles/style.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+<script>
         // Initialize Firebase
   var config = {
     apiKey: "AIzaSyBXbrqGD01x4wou1JjgBS7nKDHVIbt6ihY",
@@ -34,106 +25,81 @@
 </head>
 
 <body>
-    <div class=".container-fluid griddy">
-		
-        <div id="profile" class="row row1 align-items-top">
-            <div id="menu" class="col-2">
-                <i class="fas fa-bars"></i>
-            </div>
-            <div id="foto" class="col-3">
-                <img class="img-fluid" src="assets/olga%20komarova-500x500.jpg" alt="">
-
-            </div>
-            <div id="profile-info" class="col-7">
-                <h5>Olga Komarova</h5>
-                <p>Profile information<i class="far fa-edit"></i></p>
-                <h5>ACL TEAM</h5>
-
-            </div>
-
-        </div>
-
-        <div id="navigation" class="row row2">
-            <div class="col-sm text-center active-nav d-flex align-items-center "><h3>Workouts</h3></div>
-            <div class="col-sm text-center  d-flex align-items-center inactive-nav"><h3>Analytics</h3></div>
-            <div class="col-sm text-center  d-flex align-items-center inactive-nav"><h3>Injury info</h3></div>
-
-        </div>
-
-        <div id="overview" class="row row3  justify-content-md-center">
-			
-    <div class="col col-lg-2">
-      1 of 3
-    </div>
-    <div class="col-md-auto">
-      Variable width content
-    </div>
-    <div class="col col-lg-2">
-      3 of 3
+<div class=".container-fluid griddy">
+  <div id="profile" class="row row1 align-items-top">
+    <div id="menu" class="col-2"> <i class="fas fa-bars"></i> </div>
+    <div id="foto" class="col-3"> <img class="img-fluid img-circle" src="assets/ManFace00000.jpg" alt="Profile foto"> </div>
+    <div id="profile-info" class="col-7">
+      <h3>Tom Dan</h3>
+      <p>Profile information<i class="far fa-edit"></i></p>
+      <h5>ACL TEAM</h5>
     </div>
   </div>
-           
+  <div id="navigation" class="row row2 align-items-top justify-content-md-center ">
+	  		      <button type="button"	class=" btn btn-outline-primary btn-lg active active-nav">Workouts </button>  
+	  		      <button type="button"	class=" btn btn-outline-primary btn-lg">Analytics </button>  
+	  		      <button type="button"	class=" btn btn-outline-primary btn-lg">Injury info </button>  
 
-      
+  </div>
+  <div id="overview" class="row row3 align-items-top  justify-content-md-center">
 
-        <div id="buttons" class="row row4 align-items-center">
-
-            <div class="col-md align-self-center">
-                <button type="button"	class=" btn btn-outline-primary btn-lg ">Introduction class</button>
-            </div>
-        </div>
-
-        <div id="result-table" class="row row5 align-items-top">
-            <div class="row">
-                <div class="col-md-2">1</div>
-                <div class="col-md-4">
-                    <div class="row">Session 1</div>
-                    <div class="row">45 min workout</div>
-                </div>
-                <div class="col-md-2">2</div>
-                <div class="col-md-4">
-                    <div class="row">Session 1</div>
-                    <div class="row">45 min workout</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-2">3</div>
-                <div class="col-md-4">
-                    <div class="row">Session 1</div>
-                    <div class="row">45 min workout</div>
-                </div>
-                <div class="col-md-2">4</div>
-                <div class="col-md-4">
-                    <div class="row">Session 1</div>
-                    <div class="row">45 min workout</div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-2">5</div>
-                <div class="col-md-4">
-                    <div class="row">Session 1</div>
-                    <div class="row">45 min workout</div>
-                </div>
-                <div class="col-md-2">6</div>
-                <div class="col-md-4">
-                    <div class="row">Session 1</div>
-                    <div class="row">45 min workout</div>
-                </div>
-            </div>
-
-        </div>
-
+    <div class="col-md-auto"> <h1>Strength Module</h1>
+      <div class="text-center">Phase 1</div>
     </div>
 
+  </div>
+	
+  <div id="buttons" class="row row4 ">
+    <div class="col-md-12 justify-content-md-center">
+      <button type="button"	class=" btn btn-outline-primary btn-lg">Start excersise</button>
+    </div>
+	  
+  </div>
+	
+  <div id="result-table" class="row row5 justify-content-md-center align-items-top">
+    <div class="row">
+      <div class="col-md-2">1</div>
+      <div class="col-md-4">
+        <div class="row">Session 1</div>
+        <div class="row">45 min workout</div>
+      </div>
+      <div class="col-md-2">2</div>
+      <div class="col-md-4">
+        <div class="row">Session 1</div>
+        <div class="row">45 min workout</div>
+      </div>
+    </div>
+	  
+    <div class="row">
+      <div class="col-md-2">3</div>
+      <div class="col-md-4">
+        <div class="row">Session 1</div>
+        <div class="row">45 min workout</div>
+      </div>
+      <div class="col-md-2">4</div>
+      <div class="col-md-4">
+        <div class="row">Session 1</div>
+        <div class="row">45 min workout</div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-2">5</div>
+      <div class="col-md-4">
+        <div class="row">Session 1</div>
+        <div class="row">45 min workout</div>
+      </div>
+      <div class="col-md-2">6</div>
+      <div class="col-md-4">
+        <div class="row">Session 1</div>
+        <div class="row">45 min workout</div>
+      </div>
+    </div>
+  </div>
+</div>
 
+<!--scripts start here--> 
 
-
-
-
-    <!--scripts start here-->
-
-    <script>
+<script>
         var database = firebase.database();
         var submitButton = document.getElementById('submit');
         submitButton.addEventListener('click', createData);
@@ -170,5 +136,4 @@
 
     </script>
 </body>
-
 </html>
