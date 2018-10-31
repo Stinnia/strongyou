@@ -1,23 +1,78 @@
 @charset "utf-8";
 /* CSS Document */
 
+/*color #3BA6F7 or RGB rgb 59, 166, 247*/
+
+
+
+.griddy {
+    padding: 10px;
+    height: 100vh !important;
+	border: thin solid #D9D9D9;
+	overflow: hidden;
+}
+.row {
+	padding: 10px;
+}
+
+.row1 {
+	height: 15%;
+	overflow: hidden;
+	padding-top: 20px;		
+}
+
+.row2 {
+	height: 10%;
+		overflow: hidden;
+
+}
+.row3 {
+	height: 20%;
+		overflow: hidden;
+}
+.row4 {
+	height: 5%;
+		overflow: hidden;
+
+}
+.row5 {
+	height: 50%;
+	overflow: hidden;
+
+}
+
+/*navigation*/
+.active-nav {
+	background-color: #3BA6F7;
+	height: 80%;
+		vertical-align: middle;
+
+}
+
+.inactive-nav {
+	background-color: white;
+	border-bottom: 1px solid #3BA6F7;
+		border-right: 1px solid #3BA6F7;
+			border-top: 1px solid #3BA6F7;
+	height: 80%;
+}
+
+
+.active-nav h3 {
+/*	margin-top: 20%;*/
+	font-size: 2em;
+	color: white;
+	text-align: center;
+	
+}
+
+
 th {
     border: 1px black solid;
     padding: 5px 10px;
 }
 
-/*
-.griddy {
-    width: 100%;
-    max-width: 600px;
-    margin: 20 100;
-    overflow: hidden;
-}
 
-.box {
-    background: aqua;
-    max-width: 600px;
-    height: 200px;
-    border-radius: 10px;
-}
-*/
+
+
+
