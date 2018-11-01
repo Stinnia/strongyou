@@ -44,8 +44,8 @@
 }
 
 .square-field {
-	height: 50px;
-	width: 50px;
+	height: 45px;
+	width: 45px;
 	text-align: center;
 }
 
@@ -88,7 +88,10 @@
 	color: #3BA6F7;
 }
 
-
+.blue-subheadings  {
+	color: #3BA6F7;
+	font-size: 1em;
+}
 
 
 input {
