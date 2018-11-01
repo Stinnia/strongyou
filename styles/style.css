@@ -37,6 +37,10 @@
 	overflow: hidden;
 }
 
+h5 {
+	font-size: 1.1em;
+}
+
 
 /*navigation*/
 .active-nav {
@@ -75,6 +79,7 @@
 }
 .btn:focus, .btn:active:focus, .btn.active:focus {
     outline: 0 none;
+	background-color: #3BA6F7 !important;
 
 	
 }
@@ -96,6 +101,11 @@
 #profile-info i{
 	margin: 5px;
 	font-size: 30px; 
+	color: #3BA6F7;
+}
+
+#profile-info p{ 
+	font-size: 0.6em; 
 	color: #3BA6F7;
 }
 
