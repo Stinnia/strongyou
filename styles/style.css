@@ -16,12 +16,12 @@
 }
 
 .row1 {
-	height: 20%;
+	height: 15%;
 	overflow: hidden;
 
 }
 .row2 {
-	height: 5%;
+	height: 8%;
 	overflow: hidden;
 }
 .row3 {
@@ -41,6 +41,7 @@
 /*navigation*/
 .active-nav {
 	background-color: #3BA6F7;
+	color: white;
 }
 
 .square-field {
@@ -70,15 +71,25 @@
 	margin: 0;
 	font-size: 13px;
 	color: #3BA6F7;
+	height: 100%;
 }
 .btn:focus, .btn:active:focus, .btn.active:focus {
     outline: 0 none;
+
+	
 }
+
+.active-nav {
+		background-color: #3BA6F7 !important;
+	border: 1px solid #3BA6F7 !important;
+}
+
+
 
 /*font awesome styling*/
 
 #menu i{
-	font-size: 55px; 
+	font-size: 40px; 
 	color: #3BA6F7;
 }
 
