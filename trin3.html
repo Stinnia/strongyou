@@ -34,13 +34,27 @@
 </script>
 </head>
 
-<body>
+<body class="griddy">
     <div class=".container-fluid griddy">
 		
-        <div id="profile" class="row row1 align-items-top">
-            
+<div class="row row-nav align-items-top">
+	<ul class="nav justify-content-center no-gutters">
+  <li class="nav-item">
+    <a class="nav-link" href="index_frontend.html">Trin 1</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="trin2.html">Trin 2</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="trin3.html">Trin 3</a>
+  </li>
+		<li class="nav-item">
+    <a class="nav-link" href="#">Trin 4</a>
+  </li>
 
-            </div>
+</ul>
+	
+	</div>
 
        
 
@@ -58,12 +72,12 @@
 
             
         </div>
-
+		<h3 class="text-center">Workout-log</h3>
         <div id="result-table" class="row row5 align-items-top">
-			<h3 class="text-center">Workout-log</h3>
-            <div class="row">
-                
-<table>
+	
+          
+ <form action="">
+	<table>
   <thead>
     <tr>
       <th>Set</th>
@@ -76,13 +90,13 @@
   </thead>
   <tbody>
 	  
-	  <tr><form>
+	  <tr>
 	  <td><input type="number" id="set" placeholder="Set" required></td>
 	  <td><input type="text" id="previous" value="14kgx10"></td>
 	  <td><input type="number" id="kg" placeholder="14" required></td>
 	  <td><input type="number" id="reps" placeholder="10" required></td>
 	  <td><button type="submit" id="submit">Done</button></td>
-	  </form></tr>
+	  </tr>
 	  <tr>
       <td id="output_set"></td>
       <td id="output_previous"></td>
@@ -91,8 +105,10 @@
       <td id="output_done"></td>
     </tr>
   </tbody>
-</table>
-			</div>
+</table>			
+</form>               
+
+		
 		</div>
 	</div>
 <script>

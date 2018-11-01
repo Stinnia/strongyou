@@ -10,16 +10,18 @@ body {
 
 
 .griddy {
-	padding: 40px 10px;
+	padding: 0 10px;
 	height: 100vh !important;
 	border: thin solid #D9D9D9;
 	overflow: hidden;
 }
 
-
+.row-nav {
+	height:5%;
+}
 
 .row1 {
-	height: 20%;
+	height: 15%;
 	overflow: hidden;
 
 }
@@ -82,10 +84,6 @@ body {
 
 
 
-
-td {
-	font-size: 2em;
-}
 
 #menu i{
 	font-size: 55px; 
