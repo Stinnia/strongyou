@@ -1,26 +1,17 @@
 <!doctype html>
 <html>
-
 <head>
-    <meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Strong you</title>
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
-
-    <link rel="stylesheet" href="styles/style.css">
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-    <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
-
-    <script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Strong you</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+<link rel="stylesheet" href="styles/style.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+<script>
         // Initialize Firebase
   var config = {
     apiKey: "AIzaSyBXbrqGD01x4wou1JjgBS7nKDHVIbt6ihY",
@@ -35,82 +26,51 @@
 </head>
 
 <body>
-    <div class=".container-fluid griddy">
-		
-<div class="row row-nav align-items-top">
-	<ul class="nav justify-content-center no-gutters">
-  <li class="nav-item">
-    <a class="nav-link" href="index_frontend.html">Trin 1</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="trin2.html">Trin 2</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="trin3.html">Trin 3</a>
-  </li>
-		<li class="nav-item">
-    <a class="nav-link" href="#">Trin 4</a>
-  </li>
-
-</ul>
+<div class=".container-fluid griddy">
+  <div class="row row-nav align-items-top">
+    <ul class="nav justify-content-center no-gutters">
+      <li class="nav-item"> <a class="nav-link" href="index_frontend.html">Trin 1</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="trin2.html">Trin 2</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="trin3.html">Trin 3</a> </li>
+      <li class="nav-item"> <a class="nav-link" href="#">Trin 4</a> </li>
+    </ul>
+  </div>
+  
 	
-	</div>
-
-       
-
-        <div id="navigation" class="row row2">
-            
-
-        </div>
-
-        <div id="overview" class="row row3 align-items-center">
-            
-
-        </div>
-
-        <div id="buttons" class="row row4 align-items-center">
-
-            
-        </div>
-		<h3 class="text-center">Workout-log</h3>
-        <div id="result-table" class="row row5 align-items-top">
+  <div id="result-table" class="row row5 p-3 align-items-top">
+	  <h3 class="text-center">Workout-log</h3>
 	
-          
- <form action="">
-	<table>
-  <thead>
-    <tr>
-      <th>Set</th>
-      <th>Previous</th>
-      <th>Kg</th>
-      <th>Reps</th>
-      <th>Done</th>
-    </tr>
-    
-  </thead>
-  <tbody>
-	  
-	  <tr>
-	  <td><input type="number" id="set" placeholder="Set" required></td>
-	  <td><input type="text" id="previous" value="14kgx10"></td>
-	  <td><input type="number" id="kg" placeholder="14" required></td>
-	  <td><input type="number" id="reps" placeholder="10" required></td>
-	  <td><button type="submit" id="submit">Done</button></td>
-	  </tr>
-	  <tr>
-      <td id="output_set"></td>
-      <td id="output_previous"></td>
-      <td id="output_kg"></td>
-      <td id="output_reps"></td>
-      <td id="output_done"></td>
-    </tr>
-  </tbody>
-</table>			
-</form>               
-
-		
-		</div>
-	</div>
+    <form action="">
+      <table>
+        <thead>
+          <tr>
+            <th>Set</th>
+            <th>Previous</th>
+            <th>Kg</th>
+            <th>Reps</th>
+            <th>Done</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="number" id="set" placeholder="Set" required></td>
+            <td><input type="text" id="previous" value="14kgx10"></td>
+            <td><input type="number" id="kg" placeholder="14" required></td>
+            <td><input type="number" id="reps" placeholder="10" required></td>
+            <td><button type="submit" id="submit">Done</button></td>
+          </tr>
+          <tr>
+            <td id="output_set"></td>
+            <td id="output_previous"></td>
+            <td id="output_kg"></td>
+            <td id="output_reps"></td>
+            <td id="output_done"></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+</div>
 <script>
 	
 	
@@ -167,5 +127,4 @@
 
 </script>
 </body>
-
 </html>

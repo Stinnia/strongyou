@@ -4,11 +4,6 @@
 /*color #3BA6F7 or RGB rgb 59, 166, 247*/
 
 
-body {
-	
-}
-
-
 .griddy {
 	padding: 0 10px;
 	height: 100vh !important;
@@ -41,16 +36,6 @@ body {
 	height: 45%;
 	overflow: hidden;
 }
-
-.row5 .row p {
-	font-size:0.9em;
-}
-
-/*
-.row5 .row div {
-	font-size:1.5em;
-}
-*/
 
 
 /*navigation*/
@@ -94,6 +79,8 @@ body {
 	font-size: 30px; 
 	color: #3BA6F7;
 }
+
+
 
 
 input {
