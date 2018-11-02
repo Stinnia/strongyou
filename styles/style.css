@@ -45,11 +45,15 @@ h5 {
 	font-size: 1.1em;
 }
 
-.instructions ol li p {
+.instructions  li p {
 	font-size: 0.7em;
 	color: darkgrey;
 }
 
+ul {
+	list-style:none;
+	
+}
 
 
 
