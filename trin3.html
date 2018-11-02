@@ -27,18 +27,14 @@
 
 <body>
 <div class=".container-fluid griddy">
-  <div class="row row-nav align-items-top">
-    <ul class="nav justify-content-center no-gutters">
-      <li class="nav-item"> <a class="nav-link" href="index_frontend.html">Trin 1</a> </li>
-      <li class="nav-item"> <a class="nav-link" href="trin2.html">Trin 2</a> </li>
-      <li class="nav-item"> <a class="nav-link" href="trin3.html">Trin 3</a> </li>
-      <li class="nav-item"> <a class="nav-link" href="trin4.html">Trin 4</a> </li>
-    </ul>
-  </div>
+	
 
-  <div class="mt-3 align-content-center">
-	           <h5 class="text-center">Front Squat</h5>
-	<img class="mt-3 align-content-center" src="assets/exercises/excersise_0003_Layer-4.png" alt="Generic placeholder image">
+  <div class="row mt-5 align-content-center">
+
+      <div class="square-field active-nav"> <i class="fas fa-chevron-left" onclick="javascript:location.href='trin2.html'"></i></div>
+	  	  	  <h5 class="text-center ml-3">Front Squat</h5> 
+	<img class="mt-3" src="assets/exercises/excersise_0003_Layer-4.png" alt="Generic placeholder image">
+
    
   </div>
 	<div class="row">
@@ -58,41 +54,42 @@
 	
 </div>
 	
-	
-  <div id="result-table" class="row p-3 align-items-top">
-    <h4 class="text-center blue-subheadings">Workout-log</h4>
-    <div>
-  <form action="">
-    <table>
-      <thead>
-        <tr>
-          <th>Set</th>
-          <th>Previous</th>
-          <th>Kg</th>
-          <th>Reps</th>
-          <th>Done</th>
-          </tr>
-        </thead>
-      <tbody>
-        <tr>
-          <td><input type="number" id="set" placeholder="Set" required></td>
-          <td><input type="text" id="previous" value="14kgx10"></td>
-          <td><input type="number" id="kg" placeholder="14" required></td>
-          <td><input type="number" id="reps" placeholder="10" required></td>
-          <td><button type="submit" id="submit">Done</button></td>
-          </tr>
-        <tr>
-          <td id="output_set"></td>
-          <td id="output_previous"></td>
-          <td id="output_kg"></td>
-          <td id="output_reps"></td>
-          <td id="output_done"></td>
-          </tr>
-        </tbody>
-      </table>
-  </form>
-    </div>
+<h4 class="text-center blue-subheadings">Workout-log</h4>
+<div class="row">
+  <div id="result-table" class="table-responsive p-1 align-items-top">
+    
+    
+    <form action="">
+      <table class=" table-borderless no-gutters">
+        <thead>
+          <tr>
+            <th scope="col">Set</th>
+            <th scope="col">Previous</th>
+            <th scope="col">Kg</th>
+            <th scope="col">Reps</th>
+            <th scope="col">Done</th>
+            </tr>
+          </thead>
+        <tbody>
+          <tr>
+            <th scope="row"><input type="number" id="set" placeholder="Set" required></th>
+            <td><input type="text" id="previous" value="14kgx10"></td>
+            <td><input type="number" id="kg" placeholder="14" required></td>
+            <td><input type="number" id="reps" placeholder="10" required></td>
+            <td><button type="submit" id="submit">Done</button></td>
+            </tr>
+          <tr>
+            <td id="output_set"></td>
+            <td id="output_previous"></td>
+            <td id="output_kg"></td>
+            <td id="output_reps"></td>
+            <td id="output_done"></td>
+            </tr>
+          </tbody>
+        </table>
+      </form>
   </div>
+</div>
 </div>
 <script>
 	
