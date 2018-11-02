@@ -135,17 +135,14 @@ ul {
 	font-size: 1em;
 }
 
-
-/*
 input {
-	width: 50px;
+	width: 75px;
 }
-
 
 th {
 	border: none;
 }
-<<<<<<< HEAD
+
 *, *:before, *:after {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
  }
@@ -160,13 +157,7 @@ h2 {
   color: #333;
 }
 
-.container {
-  width: 500px;
-  background: #fff;
-  padding: 20px;
-  overflow: hidden;
-  float: left;
-}
+
 
 /* Vertical */
 
@@ -218,6 +209,3 @@ h2 {
 .ui-widget.ui-widget-content {
 	border: none !important;
 }
-=======
-*/
->>>>>>> b6bd80dd14452261785b27d2d0c3b5fa0f8a39a9
