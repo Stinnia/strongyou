@@ -9,7 +9,7 @@
 	height: 100vh !important;
 	max-width: 1024px;
 	border: thin solid #D9D9D9;
-	overflow: hidden;
+	overflow: scroll;
 }
 
 .row-nav {
@@ -18,20 +18,20 @@
 
 .row1 {
 	height: 15%;
-	overflow: hidden;
+
 
 }
 .row2 {
 	height: 8%;
-	overflow: hidden;
+
 }
 .row3 {
 	height: 15%;
-	overflow: hidden;
+
 }
 .row4 {
 	height: 10%;
-	overflow: hidden;
+	
 }
 .row5 {
 	height: 45%;
@@ -41,6 +41,15 @@
 h5 {
 	font-size: 1.1em;
 }
+
+.instructions ol li p {
+	font-size: 0.7em;
+	color: darkgrey;
+}
+
+
+
+
 
 
 /*navigation*/
