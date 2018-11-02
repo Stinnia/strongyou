@@ -65,7 +65,7 @@
   <div id="result-table" class="table-responsive p-1 align-items-top">
     
     <form action="">
-      <table class=" table-borderless no-gutters">
+      <table class=" table-borderless">
         <thead>
           <tr>
             <th scope="col">Set</th>
@@ -75,26 +75,41 @@
             <th scope="col">Done</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
+          <tbody class="mt-5">
+            <tr >
               <th scope="row"><input type="number" id="set" placeholder="Set" required></th>
-              <td><input type="text" id="previous" value="14kgx10"></td>
-              <td><input type="number" id="kg" placeholder="14" required></td>
-              <td><input type="number" id="reps" placeholder="10" required></td>
-              <td><button type="submit" id="submit">Done</button></td>
+              <td><input type="text" id="previous" value="14 kg x10"></td>
+              <td><input class="border" type="number" id="kg" placeholder="14" required></td>
+              <td><input class="border" type="number" id="reps" placeholder="10" required></td>
+              <td><button class="btn btn-outline-primary active active-nav" type="submit" id="submit">Done</button></td>
             </tr>
             <tr>
-              <td id="output_set"></td>
-              <td id="output_previous"></td>
-              <td id="output_kg"></td>
-              <td id="output_reps"></td>
-              <td id="output_done"></td>
+              <td class="small-table font-weight-light" id="output_set"></td>
+              <td class="small-table font-weight-light" id="output_previous"></td>
+              <td class="small-table font-weight-light" id="output_kg"></td>
+              <td class="small-table font-weight-light"  id="output_reps"></td>
+              <td class="small-table font-weight-light" id="output_done"></td>
             </tr>
           </tbody>
         </table>
       </form>
+	  
+	  
+	  
     </div>
+	
+	   
+	
   </div>
+	   <div class="col-md-12 mt-5 d-flex flex-row justify-content-between">
+      <a href="trin2.html" class="button">
+  <button type="button"	class=" btn btn-outline-primary btn-lg">previous</button>
+      </a>
+		         <a href="trin2.html" class="button">
+  <button type="button"	class=" btn btn-outline-primary btn-lg">next</button>
+      </a>
+		
+    </div>
 </div>
 	</div>
 <script>
