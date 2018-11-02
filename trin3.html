@@ -28,10 +28,9 @@
 <body>
 <div class=".container-fluid griddy">
 
-  <div class="row mt-5 justify-content-center">
+  <div class="row mt-5 ali">
 
-      
-  
+
   <h5 class="text-center">Front Squat</h5> 
         <img  src="assets/exercises/excersise_0003_Layer-4.png" alt="Generic placeholder image">
 
@@ -74,7 +73,8 @@
             <th scope="col">Done</th>
             </tr>
           </thead>
-          <tbody class="mt-5">
+		 
+          <tbody >
             <tr >
               <th scope="row"><input type="number" id="set" placeholder="Set" required></th>
               <td><input type="text" id="previous" value="14 kg x10"></td>
@@ -82,6 +82,7 @@
               <td><input class="border" type="number" id="reps" placeholder="10" required></td>
               <td><button class="btn btn-outline-primary active active-nav" type="submit" id="submit">Done</button></td>
             </tr>
+			 
             <tr>
               <td class="small-table font-weight-light" id="output_set"></td>
               <td class="small-table font-weight-light" id="output_previous"></td>
@@ -89,6 +90,7 @@
               <td class="small-table font-weight-light"  id="output_reps"></td>
               <td class="small-table font-weight-light" id="output_done"></td>
             </tr>
+			  <hr>
           </tbody>
         </table>
       </form>
