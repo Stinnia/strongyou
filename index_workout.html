@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Document</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="styles/style.css">
+<script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBXbrqGD01x4wou1JjgBS7nKDHVIbt6ihY",
+    authDomain: "workout-4d072.firebaseapp.com",
+    databaseURL: "https://workout-4d072.firebaseio.com",
+    projectId: "workout-4d072",
+    storageBucket: "workout-4d072.appspot.com",
+    messagingSenderId: "431224881060"
+  };
+  firebase.initializeApp(config);
+</script>
+</head>
+
+<body>
+<div class="container">
+  <h2>Workout-log</h2>
+  <div class="panel panel-default">
+    <div class="panel-body">Set 1
+		<table>
+			<form>
+			<thead>
+      
+		  <th><label for="previous">Previous</label></th>
+		  <input type="text" id="previous" disabled value="14kgx10">
+		  <label for="kg">Kg</label>
+		  <input type="number" id="kg" placeholder="14" required>
+		  <label for="reps">Reps</label>
+		  <input type="number" id="reps" placeholder="10" required>
+		  <input type="checkbox" id="submit" onclick="form.submit();">
+		  </thead>
+		  <tr>
+		  <td id="output_kg"></td>
+          <td id="output_reps"></td>
+          <td id="output_done"></td></tr>
+      </form>
+		</table>
+    </div>
+  </div>
+	
+</div>
+<script>
+	
+	
+	    var database = firebase.database();
+	var submitButton = document.getElementById('submit');
+	var tableData = [];
+	submitButton.addEventListener('click', createData);
+	
+	
+	
+	// read from database
+	database.ref('workout-log/sessions-01/pull-ups/').once('value', function(snapshot) {
+		
+   		snapshot.forEach(function (childSnap) {
+			let kg = childSnap.child('kg').val();
+			let reps = childSnap.child('reps').val();
+			let done = childSnap.child('done').val();
+			
+  			console.log(kg);
+			// rendering the keys and values;
+			document.getElementById('output_kg').innerHTML += kg + '<br>';
+			document.getElementById('output_reps').innerHTML += reps + '<br>';
+			document.getElementById('output_done').innerHTML += '<input type="checkbox" checked disabled>' + '<br>';
+			
+ 		});
+  });
+	
+// write to database
+	function createData () {
+		var kg = document.getElementById('kg').value;
+		var reps = document.getElementById('reps').value;
+		// console.log(name + ', ' + score)
+		// storing user input in an object
+		var playerData = {
+			"kg" : kg,
+			"reps" : reps
+		}
+		// generate a firebase key for the object
+		var newData = database.ref('workout-log/sessions-01/pull-ups/').push().key;
+		// update database with the player object
+		database.ref('workout-log/sessions-01/pull-ups/' + newData).update(playerData);
+	}
+
+</script>
+</body>
+</html>
