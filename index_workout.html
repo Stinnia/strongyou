@@ -2,15 +2,16 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Untitled Document</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<title>Strong you</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
 <link rel="stylesheet" href="styles/style.css">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
 <script>
-  // Initialize Firebase
+        // Initialize Firebase
   var config = {
     apiKey: "AIzaSyBXbrqGD01x4wou1JjgBS7nKDHVIbt6ihY",
     authDomain: "workout-4d072.firebaseapp.com",
@@ -24,66 +25,91 @@
 </head>
 
 <body>
-<div class="container">
-  <h2>Workout-log</h2>
-  <div class="panel panel-default">
-    <div class="panel-body">Set 1
-		<table>
-			<form>
-			<thead>
-      
-		  <th><label for="previous">Previous</label></th>
-		  <input type="text" id="previous" disabled value="14kgx10">
-		  <label for="kg">Kg</label>
-		  <input type="number" id="kg" placeholder="14" required>
-		  <label for="reps">Reps</label>
-		  <input type="number" id="reps" placeholder="10" required>
-		  <input type="checkbox" id="submit" onclick="form.submit();">
-		  </thead>
-		  <tr>
-		  <td id="output_kg"></td>
-          <td id="output_reps"></td>
-          <td id="output_done"></td></tr>
+<div class="container-fluid griddy">
+  <div id="profile" class="row row1 align-items-top"> </div>
+  <div id="navigation" class="row row2"> </div>
+  <div id="overview" class="row row3 align-items-center"> </div>
+  <div id="buttons" class="row row4 align-items-center"> </div>
+  <div id="result-table" class="row row5 align-items-top">
+    <h3 class="text-center">Workout-log</h3>
+    <div class="row">
+      <form>
+        <table>
+          <thead>
+            <tr>
+              <th>Set</th>
+              <th>Previous</th>
+              <th>Kg</th>
+              <th>Reps</th>
+              <th>Done</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="number" id="set" placeholder="Set" required></td>
+              <td><input type="text" id="previous" value="14kgx10"></td>
+              <td><input type="number" id="kg" placeholder="14" required></td>
+              <td><input type="number" id="reps" placeholder="10" required></td>
+              <td><button type="submit" id="submit" onclick="form.submit();">Done</button></td>
+            </tr>
+            <tr>
+              <td id="output_set"></td>
+              <td id="output_previous"></td>
+              <td id="output_kg"></td>
+              <td id="output_reps"></td>
+              <td id="output_done"></td>
+            </tr>
+          </tbody>
+        </table>
       </form>
-		</table>
     </div>
   </div>
-	
 </div>
 <script>
 	
 	
-	    var database = firebase.database();
+	  var database = firebase.database();
 	var submitButton = document.getElementById('submit');
 	var tableData = [];
 	submitButton.addEventListener('click', createData);
 	
+
 	
 	
 	// read from database
 	database.ref('workout-log/sessions-01/pull-ups/').once('value', function(snapshot) {
 		
    		snapshot.forEach(function (childSnap) {
+			
+			let set = childSnap.child('set').val();
+			let previous = childSnap.child('previous').val();
 			let kg = childSnap.child('kg').val();
 			let reps = childSnap.child('reps').val();
 			let done = childSnap.child('done').val();
 			
   			console.log(kg);
-			// rendering the keys and values;
+			// rendering the keys and values
+			document.getElementById('output_set').innerHTML +=  set + '<br>';
+			document.getElementById('output_previous').innerHTML += kg + ' kg x' + reps + '<br>';
 			document.getElementById('output_kg').innerHTML += kg + '<br>';
 			document.getElementById('output_reps').innerHTML += reps + '<br>';
 			document.getElementById('output_done').innerHTML += '<input type="checkbox" checked disabled>' + '<br>';
-			
  		});
   });
 	
+	// kg + ' kg' + ': ' + rep + ' reps' + 
+	
 // write to database
 	function createData () {
+		var set = document.getElementById('set').value;
+		var previous = document.getElementById('previous').value;
 		var kg = document.getElementById('kg').value;
 		var reps = document.getElementById('reps').value;
 		// console.log(name + ', ' + score)
 		// storing user input in an object
 		var playerData = {
+			"set" : set,
+			"previous" : previous,
 			"kg" : kg,
 			"reps" : reps
 		}
