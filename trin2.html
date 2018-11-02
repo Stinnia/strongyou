@@ -11,18 +11,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 <script src="https://www.gstatic.com/firebasejs/5.5.6/firebase.js"></script>
-<script>
-        // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyBXbrqGD01x4wou1JjgBS7nKDHVIbt6ihY",
-    authDomain: "workout-4d072.firebaseapp.com",
-    databaseURL: "https://workout-4d072.firebaseio.com",
-    projectId: "workout-4d072",
-    storageBucket: "workout-4d072.appspot.com",
-    messagingSenderId: "431224881060"
-  };
-  firebase.initializeApp(config);
-</script>
+
 </head>
 
 <body>
@@ -82,43 +71,5 @@
   </div>
 </div>
 
-<!--scripts start here--> 
-
-<script>
-        var database = firebase.database();
-        var submitButton = document.getElementById('submit');
-        submitButton.addEventListener('click', createData);
-
-        // read from database
-        database.ref('workout/').once('value', function(snapshot) {
-            snapshot.forEach(function(childSnap) {
-                // storing all keys (i.e. "player1", "player2", ... )
-                let kg = childSnap.child('kg').val();
-                // storing all values of the child node "score"
-                let rep = childSnap.child('rep').val();
-                console.log(kg);
-                // rendering the keys and values
-                document.getElementById('output').innerHTML += kg + ' kg' + ' ' + rep + ' reps' + '<br>';
-            });
-        });
-        // kg + ' kg' + ': ' + rep + ' reps' + 
-
-        // write to database
-        function createData() {
-            var kg = document.getElementById('kg').value;
-            var rep = document.getElementById('rep').value;
-            // console.log(name + ', ' + score)
-            // storing user input in an object
-            var playerData = {
-                "kg": kg,
-                "rep": rep
-            }
-            // generate a firebase key for the object
-            var newData = database.ref('workout/').push().key;
-            // update database with the player object
-            database.ref('workout/' + newData).update(playerData);
-        }
-
-    </script>
 </body>
 </html>
