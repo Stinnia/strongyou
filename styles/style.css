@@ -35,7 +35,7 @@
 }
 .row5 {
 	height: 45%;
-	overflow: hidden;
+	overflow: scroll;
 }
 
 h5 {
@@ -53,7 +53,11 @@ h5 {
 	height: 45px;
 	width: 45px;
 	text-align: center;
+	padding-top: 10px;
+
 }
+
+
 
 
 .inactive-nav {
