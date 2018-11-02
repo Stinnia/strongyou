@@ -138,6 +138,7 @@ ul {
 input {
 	width: 75px;
 }
+/*
 
 th {
 	border: none;
@@ -157,7 +158,13 @@ h2 {
   color: #333;
 }
 
-
+.container {
+  width: 500px;
+  background: #fff;
+  padding: 20px;
+  overflow: hidden;
+  float: left;
+}
 
 /* Vertical */
 
