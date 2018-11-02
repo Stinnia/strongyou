@@ -27,49 +27,69 @@
 
 <body>
 <div class=".container-fluid griddy">
-  <div class="row row-nav align-items-top">
-    <ul class="nav justify-content-center no-gutters">
-      <li class="nav-item"> <a class="nav-link" href="index_frontend.html">Trin 1</a> </li>
-      <li class="nav-item"> <a class="nav-link" href="trin2.html">Trin 2</a> </li>
-      <li class="nav-item"> <a class="nav-link" href="trin3.html">Trin 3</a> </li>
-      <li class="nav-item"> <a class="nav-link" href="trin4.html">Trin 4</a> </li>
-    </ul>
+	
+
+  <div class="row mt-5 align-content-center">
+
+      <div class="square-field active-nav"> <i class="fas fa-chevron-left" onclick="javascript:location.href='trin2.html'"></i></div>
+	  	  	  <h5 class="text-center ml-3">Front Squat</h5> 
+	<img class="mt-3" src="assets/exercises/excersise_0003_Layer-4.png" alt="Generic placeholder image">
+
+   
   </div>
-  
+	<div class="row">
+      <div class="col p-3 instructions">
+  <ul><li>	<p>1. Inhale as you squat down by simultaneously pushing your butt backward and bending your knees forward.</p></li>
+    
+    <li>	<p>2. Keep your torso upright, and descend at least until your knees are bent at a 90-degree angle.</p></li>
+    
+    <li>    <p>3. Exhale as you push your body back up to the starting position, driving through your heels and keeping your torso upright.</p></li>
+    
+    <li>  <p>4. Repeat.</p> </li></ul>
+      </div>
+  </div>
 	
-  <div id="result-table" class="row row5 p-3 align-items-top">
-	  <h4 class="text-center">Workout-log</h4>
+<div class="row">
+
 	
+</div>
+	
+<h4 class="text-center blue-subheadings">Workout-log</h4>
+<div class="row">
+  <div id="result-table" class="table-responsive p-1 align-items-top">
+    
+    
     <form action="">
-      <table>
+      <table class=" table-borderless no-gutters">
         <thead>
           <tr>
-            <th>Set</th>
-            <th>Previous</th>
-            <th>Kg</th>
-            <th>Reps</th>
-            <th>Done</th>
-          </tr>
-        </thead>
+            <th scope="col">Set</th>
+            <th scope="col">Previous</th>
+            <th scope="col">Kg</th>
+            <th scope="col">Reps</th>
+            <th scope="col">Done</th>
+            </tr>
+          </thead>
         <tbody>
           <tr>
-            <td><input type="number" id="set" placeholder="Set" required></td>
+            <th scope="row"><input type="number" id="set" placeholder="Set" required></th>
             <td><input type="text" id="previous" value="14kgx10"></td>
             <td><input type="number" id="kg" placeholder="14" required></td>
             <td><input type="number" id="reps" placeholder="10" required></td>
             <td><button type="submit" id="submit">Done</button></td>
-          </tr>
+            </tr>
           <tr>
             <td id="output_set"></td>
             <td id="output_previous"></td>
             <td id="output_kg"></td>
             <td id="output_reps"></td>
             <td id="output_done"></td>
-          </tr>
-        </tbody>
-      </table>
-    </form>
+            </tr>
+          </tbody>
+        </table>
+      </form>
   </div>
+</div>
 </div>
 <script>
 	

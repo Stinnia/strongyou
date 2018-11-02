@@ -9,7 +9,7 @@
 	height: 100vh !important;
 	max-width: 1024px;
 	border: thin solid #D9D9D9;
-	overflow: hidden;
+	overflow: scroll;
 }
 .row {
 	margin-left: 0!important;
@@ -21,20 +21,20 @@
 
 .row1 {
 	height: 15%;
-	overflow: hidden;
+
 
 }
 .row2 {
 	height: 8%;
-	overflow: hidden;
+
 }
 .row3 {
 	height: 15%;
-	overflow: hidden;
+
 }
 .row4 {
 	height: 10%;
-	overflow: hidden;
+	
 }
 .row5 {
 	height: 45%;
@@ -44,6 +44,19 @@
 h5 {
 	font-size: 1.1em;
 }
+
+.instructions  li p {
+	font-size: 0.7em;
+	color: darkgrey;
+}
+
+ul {
+	list-style:none;
+	
+}
+
+
+
 
 
 /*navigation*/
@@ -123,14 +136,16 @@ h5 {
 }
 
 
+/*
 input {
-	width: 75px;
+	width: 50px;
 }
 
 
 th {
 	border: none;
 }
+<<<<<<< HEAD
 *, *:before, *:after {
   -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
  }
@@ -203,3 +218,6 @@ h2 {
 .ui-widget.ui-widget-content {
 	border: none !important;
 }
+=======
+*/
+>>>>>>> b6bd80dd14452261785b27d2d0c3b5fa0f8a39a9
